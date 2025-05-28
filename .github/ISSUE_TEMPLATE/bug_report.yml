@@ -5,13 +5,22 @@ labels: ["bug"]
 projects: ["Project-Ticketing"]
 body:
   - type: input
-    id: title
+    id: module
     attributes:
-      label: Bug Title
-      description: A brief title for the bug report.
+      label: Module
+      description: The module or feature where the bug was found.
     validations:
       required: true
   - type: markdown
     attributes:
       value: |
         Please provide a detailed description of the bug you encountered, including steps to reproduce it, expected behavior, and actual behavior.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
