@@ -1,0 +1,17 @@
+name: Bug Report
+description: File a bug report
+title: "[BUG] "
+labels: ["bug"]
+projects: ["Project-Ticketing"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Bug Title
+      description: A brief title for the bug report.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Please provide a detailed description of the bug you encountered, including steps to reproduce it, expected behavior, and actual behavior.
