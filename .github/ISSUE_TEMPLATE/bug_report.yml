@@ -4,17 +4,6 @@ title: "[BUG] "
 labels: ["bug"]
 projects: ["Project-Ticketing"]
 body:
-  - type: input
-    id: module
-    attributes:
-      label: Module
-      description: The module or feature where the bug was found.
-    validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: |
-        Please provide a detailed description of the bug you encountered, including steps to reproduce it, expected behavior, and actual behavior.
   - type: textarea
     id: what-happened
     attributes:
@@ -24,3 +13,26 @@ body:
       value: "A bug happened!"
     validations:
       required: true
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: The module or feature where the bug was found.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: The level of importance of the bug needs to be fixed.
+      options:
+        - Blocking
+        - Major
+        - Moderate
+        - Minor
+    validations:
+      required: true
+  # - type: markdown
+  #   attributes:
+  #     value: |
+  #       Please provide a detailed description of the bug you encountered, including steps to reproduce it, expected behavior, and actual behavior.
