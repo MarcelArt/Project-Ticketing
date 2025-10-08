@@ -14,36 +14,6 @@ body:
       required: true
 
   - type: textarea
-    id: screenshots
-    attributes:
-      label: Videos/Screenshots
-      description: Please add any screenshots or videos that help explain the issue
-      placeholder: Drag and drop images or videos here, or provide links
-    validations:
-      required: false
-
-  - type: input
-    id: transaction-id
-    attributes:
-      label: Transaction ID
-      description: Please provide the transaction ID related to this issue
-      placeholder: Enter the transaction ID
-    validations:
-      required: false
-
-  - type: dropdown
-    id: transaction-type
-    attributes:
-      label: Type of Transaction
-      description: Select the type of transaction related to this issue
-      options:
-        - Material
-        - Product
-        - Others
-    validations:
-      required: false
-
-  - type: textarea
     id: steps-to-reproduce
     attributes:
       label: Steps to Reproduce
@@ -56,15 +26,23 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: severity
+  - type: input
+    id: transaction-id
     attributes:
-      label: Severity
-      description: The level of importance of the bug needs to be fixed.
+      label: Transaction ID
+      description: Please provide the transaction ID related to this issue
+      placeholder: Enter the transaction ID
+    validations:
+      required: true
+
+  - type: dropdown
+    id: transaction-type
+    attributes:
+      label: Type of Transaction
+      description: Select the type of transaction related to this issue
       options:
-        - Blocking
-        - Major
-        - Moderate
-        - Minor
+        - Material
+        - Produk
+        - Lain-lain
     validations:
       required: true
